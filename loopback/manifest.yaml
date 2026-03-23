@@ -1,0 +1,55 @@
+account:
+  owner: 9rn59htpxb-beep
+  profile_name: David Cafaro
+  loopback_version: 1
+  purpose: >-
+    Structured control layer for AI-assisted GitHub analysis and change planning.
+
+repositories:
+  - name: flutter
+    full_name: 9rn59htpxb-beep/flutter
+    kind: upstream-fork
+    primary_language: mixed
+    role: Flutter SDK fork for experimentation and customization
+    default_branch: master
+    status: active
+  - name: ios-nrf-wi-fi-provisioner
+    full_name: 9rn59htpxb-beep/ios-nrf-wi-fi-provisioner
+    kind: library
+    primary_language: swift
+    role: iOS Wi-Fi provisioning library for Nordic devices
+    default_branch: main
+    status: active
+  - name: openaimacpaw
+    full_name: 9rn59htpxb-beep/openaimacpaw
+    kind: library
+    primary_language: swift
+    role: Swift OpenAI client and API experimentation repo
+    default_branch: main
+    status: active
+  - name: David-Anthony-Cafaro
+    full_name: 9rn59htpxb-beep/David-Anthony-Cafaro
+    kind: control
+    primary_language: markdown
+    role: Personal coordination repo and loopback home
+    default_branch: main
+    status: active
+
+capabilities:
+  github_connector_visible:
+    - repository_listing
+    - file_fetching
+    - file_search
+    - branch_creation
+    - file_creation
+    - pull_request_creation
+  github_connector_not_guaranteed:
+    - full_dependency_graph
+    - app_install_management
+    - secrets_management
+    - settings_administration
+
+rules:
+  - Prefer planning changes in this control repo before touching large upstream forks.
+  - Keep machine-readable state in YAML or Markdown near the loopback root.
+  - Document intent before creating complex branches or pull requests.

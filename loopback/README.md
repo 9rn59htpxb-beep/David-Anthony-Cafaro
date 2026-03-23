@@ -16,3 +16,12 @@ It improves coordination by giving the account a structured inventory and workfl
 - `repo-map.md` — human-readable explanation of repo roles
 - `agent-playbook.md` — rules for future AI GitHub work
 - `tasks/TEMPLATE.md` — reusable intake format for changes
+
+## Naming guidance
+- Choose intent-revealing nouns for values (e.g., `invoiceTotal` instead of `data`).
+- Use verbs for functions that perform actions and explicit subjects for what they operate on (e.g., `sendBillingEmail`, `calculateLatencyMillis`).
+- Prefix booleans with `is/has/should/can` to signal true/false semantics.
+- Pluralize collection variables and note the unit when helpful (e.g., `pendingOrders`, `userIds`).
+- Avoid unclear abbreviations unless they are domain-standard; expand to full words where possible.
+- Differentiate pure functions from mutating ones with precise verbs (`get/compute` vs. `update/replace`).
+- Name callbacks and handlers to reflect the trigger and target (`onConnectionClosed`, `handleProfileSaved`).

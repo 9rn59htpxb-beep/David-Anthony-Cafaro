@@ -25,3 +25,7 @@ Human-readable overview of all repositories tracked in this account.
 
 - This map is derived from `manifest.yaml`. When adding a new repository, update both files.
 - Repos marked `upstream-fork` track an external open-source project; keep customizations in a dedicated branch to ease rebasing.
+
+## Automation
+
+The `.github/workflows/update-status.yml` workflow runs daily and on manual trigger. It queries the GitHub API and commits an updated `loopback/status.md` to `main`. No secrets beyond the built-in `GITHUB_TOKEN` are required.

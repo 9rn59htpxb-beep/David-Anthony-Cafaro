@@ -15,4 +15,5 @@ It improves coordination by giving the account a structured inventory and workfl
 - `manifest.yaml` — machine-readable account and repo inventory
 - `repo-map.md` — human-readable explanation of repo roles
 - `agent-playbook.md` — rules for future AI GitHub work
+- `status.md` — live status dashboard (auto-generated daily by GitHub Actions)
 - `tasks/TEMPLATE.md` — reusable intake format for changes

@@ -13,10 +13,11 @@ Rules and guidance for AI agents working on this GitHub account.
 Agents operating on this account should:
 
 1. **Read `loopback/manifest.yaml` first** to understand the repository inventory and capabilities before taking any action.
-2. **Plan changes in the control repo** before touching large upstream forks.
-3. **Open a task issue or branch** for any non-trivial change, using `loopback/tasks/TEMPLATE.md` as the intake format.
-4. **Prefer small, reversible commits** over large rewrites.
-5. **Document intent** in commit messages and pull request descriptions.
+2. **Read `loopback/status.md`** to get the current snapshot of open PRs, issues, and recent commits before planning changes.
+3. **Plan changes in the control repo** before touching large upstream forks.
+4. **Open a task issue or branch** for any non-trivial change, using `loopback/tasks/TEMPLATE.md` as the intake format.
+5. **Prefer small, reversible commits** over large rewrites.
+6. **Document intent** in commit messages and pull request descriptions.
 
 ## Decision Rules
 

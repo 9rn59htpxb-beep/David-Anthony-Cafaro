@@ -21,3 +21,6 @@ It improves coordination by giving the account a structured inventory and workfl
 1. Start with `agent-playbook.md` to follow the standard ChatGPT automation flow.
 2. Check `repo-map.md` and `manifest.yaml` to confirm the right target repo and branching expectations.
 3. Capture new requests using `tasks/TEMPLATE.md` so scope, constraints, and acceptance criteria are clear before execution.
+- `agent-playbook.md` — rules for future AI GitHub work
+- `status.md` — live status dashboard (auto-generated daily by GitHub Actions)
+- `tasks/TEMPLATE.md` — reusable intake format for changes

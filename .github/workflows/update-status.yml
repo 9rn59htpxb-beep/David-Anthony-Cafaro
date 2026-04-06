@@ -1,0 +1,57 @@
+# Update Status Dashboard
+#
+# This workflow automatically updates loopback/status.md with current repository state.
+# Runs daily and can be triggered manually.
+
+name: Update Status Dashboard
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-status:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+      issues: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Update status dashboard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Update timestamp
+          CURRENT_DATE=$(date -u +%Y-%m-%d)
+          sed -i "s/\*\*Last Updated:\*\* .*/\*\*Last Updated:\*\* $CURRENT_DATE/" loopback/status.md
+
+          # Get branch information
+          echo "## Active Branches" > /tmp/branches.txt
+          git branch -r | grep -v HEAD | sed 's|origin/||' | while read branch; do
+            echo "- \`$branch\`" >> /tmp/branches.txt
+          done
+
+          # Check if there are changes
+          if git diff --quiet loopback/status.md; then
+            echo "No changes to status dashboard"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add loopback/status.md
+            git commit -m "chore: update status dashboard [skip ci]"
+            git push
+            echo "Status dashboard updated"
+          fi
+
+      - name: Summary
+        run: |
+          echo "✅ Status dashboard update complete"
+          echo "📅 Updated: $(date -u)"

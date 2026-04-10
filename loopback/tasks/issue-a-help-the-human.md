@@ -29,7 +29,7 @@ Address Issue A: provide assistance to the repository owner as requested. This t
 - [x] Read `loopback/manifest.yaml` and `loopback/agent-playbook.md`
 - [x] Identify the affected repository and branch
 - [x] Create task file in `loopback/tasks/`
-- [ ] Open pull request
+- [x] Open pull request (#11)
 - [ ] Owner review and merge
 
 ## Notes

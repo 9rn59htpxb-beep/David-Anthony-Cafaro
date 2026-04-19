@@ -1,7 +1,7 @@
 account:
   owner: 9rn59htpxb-beep
   profile_name: David Cafaro
-  loopback_version: 1
+  loopback_version: 2
   purpose: >-
     Structured control layer for AI-assisted GitHub analysis and change planning.
 

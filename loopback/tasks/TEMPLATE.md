@@ -35,6 +35,14 @@
 - [ ] Open pull request
 - [ ] Owner review and merge
 
+## Agent Actions Taken
+
+<!-- Agents: list every file created, modified, or deleted here with a brief reason. -->
+
+| File | Action | Reason |
+|------|--------|--------|
+|      |        |        |
+
 ## Notes
 
 <!-- Any constraints, references, or context the agent should know. -->

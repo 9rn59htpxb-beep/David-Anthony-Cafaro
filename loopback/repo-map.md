@@ -10,6 +10,10 @@ Human-readable overview of all repositories tracked in this account.
 
 ## Forks
 
+1. Confirm the target repository matches the request (feature, fix, or research).
+2. Review the default branch and branching expectations before proposing a workflow.
+3. Apply the correct level of testing and documentation based on the repo’s role (SDK fork vs. library vs. control docs).
+4. Keep this file aligned with `manifest.yaml` when repositories are added, archived, or change status.
 | Repo | Role | Language | Branch |
 |------|------|----------|--------|
 | [flutter](https://github.com/9rn59htpxb-beep/flutter) | Flutter SDK fork for experimentation and customization | Mixed | `master` |
@@ -25,3 +29,7 @@ Human-readable overview of all repositories tracked in this account.
 
 - This map is derived from `manifest.yaml`. When adding a new repository, update both files.
 - Repos marked `upstream-fork` track an external open-source project; keep customizations in a dedicated branch to ease rebasing.
+
+## Automation
+
+The `.github/workflows/update-status.yml` workflow runs daily and on manual trigger. It queries the GitHub API and commits an updated `loopback/status.md` to `main`. No secrets beyond the built-in `GITHUB_TOKEN` are required.

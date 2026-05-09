@@ -48,6 +48,15 @@ capabilities:
     - app_install_management
     - secrets_management
     - settings_administration
+  automation:
+    - name: update-status
+      path: .github/workflows/update-status.yml
+      trigger: schedule (daily 06:00 UTC) and workflow_dispatch
+      output: loopback/status.md
+      description: >-
+        Queries the GitHub API for open PRs, open issues, recent commits, and
+        workflow health. Commits an updated loopback/status.md to main so the
+        dashboard is always current without manual intervention.
 
 rules:
   - Prefer planning changes in this control repo before touching large upstream forks.

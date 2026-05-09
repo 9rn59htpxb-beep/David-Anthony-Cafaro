@@ -1,31 +1,44 @@
-# Task Template
-
-Use this template when opening new work for ChatGPT. Keep entries concise and actionable.
-
-- **Title:**  
-- **Owner / Stakeholders:**  
-- **Repo(s):**  
+# Task: [Short Title]
 
 ## Summary
-What needs to be done in one or two sentences.
 
-## Background
-Context, links to issues/PRs, and why this matters now.
+<!-- One or two sentences describing what needs to change and why. -->
 
-## Scope
-- In scope:  
-- Out of scope:  
+## Affected Repository
 
-## Requirements / Acceptance Criteria
-- [ ] Criteria 1  
-- [ ] Criteria 2  
-- [ ] Criteria 3  
+- **Repo:** `9rn59htpxb-beep/`
+- **Branch:** 
+- **Files (if known):**
 
-## Constraints
-Deadlines, environments, dependencies, or policies that affect the work.
+## Type of Change
 
-## Validation
-Tests/linters to run, manual checks, and expected results.
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Refactor / cleanup
+- [ ] Documentation
+- [ ] Dependency update
+- [ ] Other: 
 
-## Deliverables
-Code/files to change, docs to update, and any artifacts to attach.
+## Acceptance Criteria
+
+<!-- What must be true for this task to be considered done? -->
+
+1. 
+2. 
+
+## Steps
+
+<!-- High-level plan. Fill in before starting work. -->
+
+- [ ] 
+- [ ] 
+- [ ] Open pull request
+- [ ] Owner review and merge
+
+## Notes
+
+<!-- Any constraints, references, or context the agent should know. -->
+
+## Status
+
+`open` | `in-progress` | `blocked` | `done`
